@@ -12,34 +12,17 @@
     section {
         display: grid;
         grid-template-columns: 150px 1fr 150px;
-        grid-template-rows: 100px 1fr 1fr 100px;
-        height: 100vh;
+        grid-template-rows: 1000px;
+        height: 1000px;
         grid-template-areas:
             "header main footer"
-            "header main footer"
-            "header main footer"
-            "header main footer"
-    }
 
-    @media (width < 768px) {
-        section {
-            grid-template-areas:
-                "header header header"
-                "main main main"
-                "main main main"
-                "footer footer footer"
-        }
     }
-
-    section header {
-        grid-area: header;
-    }
-
     section main {
         grid-area: main;
         display: grid;
-        grid-template-columns: 1fr 400px;
-        grid-template-rows: 100px 1fr 1fr 1fr;
+        grid-template-columns: 10fr 4fr;
+        grid-template-rows: 60px 370px 370px 180px;
         grid-template-areas:
             "saludo saludo"
             "componente games"
@@ -47,6 +30,37 @@
             "descarga estadistica"
 
     }
+
+    @media (width < 768px) {
+        section {
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 100px 1fr 1fr 100px;
+            grid-template-areas:
+                "header main footer"
+                "header main footer"
+                "header main footer"
+                "header main footer"
+        }
+
+        section main {
+            grid-template-columns: 1fr;
+            grid-template-rows: 60px 1fr 1fr 1fr 1fr 120px;
+            grid-template-areas:
+                "saludo"
+                "componente"
+                "games"
+                "newgames"
+                "estadistica"
+                "descarga"
+
+        }
+    }
+
+    section header {
+        grid-area: header;
+    }
+
+   
 
     section div {
         grid-area: div;
@@ -81,34 +95,39 @@
     }
 </style>
 
-<body>
+<body class="bg-gradient-to-r from-[#5E2933] via-[#63282E] to-[#61282E]">
     <section class="gap-2">
-        <header class="bg-red-400"> <livewire:the-menu /> </header>
-        <main class="bg-blue-100 gap-2">
-            <div class="bg-yellow-500">
-                <livewire:user-interface.saludo />
-                <livewire:user-interface.search />
-                <livewire:user-interface.cart />
-                <livewire:user-interface.notification />
+        <header class="flex items-center justify-center"> <livewire:the-menu /> </header>
+        <main class="gap-4">
+            <div class="flex justify-between items-center mt-2">
+                <div class="w-2/5"><livewire:user-interface.saludo /></div>
+                <div class="flex justify-between gap-24 w-3/5 items-center"><livewire:user-interface.search />
+                    <div class="flex gap-4 items-center">
+                        <livewire:user-interface.cart />
+                        <livewire:user-interface.notification />
+                    </div>
+
+                </div>
             </div>
-            <div class="bg-emerald-500">
+            <div class="">
                 <livewire:games.games-slider />
             </div>
-            <div class="bg-fuchsia-600">
+            <div class="">
                 <livewire:games.games-list />
             </div>
-            <div class="bg-amber-400">
+            <div class="">
                 <livewire:games.new-games />
             </div>
-            <div class="bg-orange-600">
+            <div class="">
                 <livewire:statistic />
             </div>
-            <div class="bg-cyan-500">
+            <div class="">
                 <livewire:games.downloaded />
             </div>
         </main>
-        <footer class="bg-indigo-400">
-            <livewire:chats.chats /> <livewire:chats.chat-group />
+        <footer class="flex items-center justify-center">
+            <livewire:chats.chats />
+
         </footer>
     </section>
 </body>

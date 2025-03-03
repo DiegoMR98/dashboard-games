@@ -1,4 +1,4 @@
-<div>
+<div class="bg-[#361619] rounded-4xl m-4 text-white h-[950px] flex flex-col items-center justify-between w-52">
     <div class="flex flex-col justify-center items-center mt-10">
         logo
         <div class="flex flex-col justify-center items-center gap-4 mt-10">
@@ -13,8 +13,8 @@
         </div>
     </div>
 
-    <div class="absolute bottom-2">
-        Añadir más opciones
+    <div class="">
+        plus
     </div>
 
 
