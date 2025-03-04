@@ -7,11 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard Game</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     section {
         display: grid;
-        grid-template-columns: 150px 1fr 150px;
+        grid-template-columns: 130px 1fr 150px;
         grid-template-rows: 1000px;
         height: 1000px;
         grid-template-areas:
@@ -95,13 +99,13 @@
     }
 </style>
 
-<body class="bg-gradient-to-r from-[#5E2933] via-[#63282E] to-[#61282E]">
+<body class="bg-gradient-to-r from-[#5E2933] via-[#63282E] to-[#61282E]" style="font-family: 'Poppins', sans-serif">
     <section class="gap-2">
         <header class="flex items-center justify-center"> <livewire:the-menu /> </header>
         <main class="gap-4">
-            <div class="flex justify-between items-center mt-2">
-                <div class="w-2/5"><livewire:user-interface.saludo /></div>
-                <div class="flex justify-between gap-24 w-3/5 items-center"><livewire:user-interface.search />
+            <div class="flex justify-between items-end mt-2">
+                <div class="w-6/10"><livewire:user-interface.saludo /></div>
+                <div class="flex justify-between gap-14 w-4/10 items-center"><livewire:user-interface.search />
                     <div class="flex gap-4 items-center">
                         <livewire:user-interface.cart />
                         <livewire:user-interface.notification />
@@ -109,13 +113,13 @@
 
                 </div>
             </div>
-            <div class="">
+            <div class="bg-amber-400">
                 <livewire:games.games-slider />
             </div>
             <div class="">
                 <livewire:games.games-list />
             </div>
-            <div class="">
+            <div class="bg-blue-400">
                 <livewire:games.new-games />
             </div>
             <div class="">
