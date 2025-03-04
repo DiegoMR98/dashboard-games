@@ -42,10 +42,10 @@
                     </div>
                 </div>
                 <div class="flex justify-center items-center bg-white rounded-4xl">
-                    <div class="px-3">
+                    <div class="px-3 flex justify-center items-center">
                         <ion-icon name="thumbs-up" class="text-2xl"></ion-icon>
                     </div>
-                    <div class="pr-3">
+                    <div class="pr-3 flex justify-center items-center">
                         <h1 style="font-family: 'Poppins', sans-serif" class="font-medium">+53 Reviews</h1>
                     </div>
                 </div>

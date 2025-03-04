@@ -1,23 +1,46 @@
 <div class="flex flex-col gap-10 justify-center items-center">
-    <div class="bg-[#361619] rounded-4xl text-white h-[600px] flex flex-col items-center justify-between w-30">
-        <div class="flex flex-col items-center gap-3">
-            <div class="mt-1">
-                foto principal
+    <div class="bg-[#361619] rounded-4xl text-white h-[600px] flex flex-col items-center justify-between w-24">
+        <div class="flex flex-col items-center  justify-center gap-6">
+            <div class="mt-10 flex justify-center items-center">
+                <div class="bg-white size-14 rounded-full flex justify-center items-center">
+                    <ion-icon name="person" class="text-4xl text-black"></ion-icon>
+                </div>
             </div>
-            <div>logo</div>
+            <div><ion-icon name="people" class="text-3xl"></ion-icon></div>
             {{-- Aca igual renderizar un array de contactos --}}
-            <div class="flex flex-col gap-3">
-                <div>foto 1</div>
-                <div>foto 2</div>
-                <div>foto 3</div>
-                <div>foto 4</div>
-                <div>foto 5</div>
-                <div>foto 6</div>
+            <div class="flex flex-col gap-4">
+                <div class="bg-white size-13 rounded-full flex justify-center items-center">
+                    <div class="size-4 rounded-full bg-[#6aaf34] absolute border-2 border-[#361619] mb-8 ml-12"></div>
+                    <ion-icon name="person" class="text-4xl text-black"></ion-icon>
+                </div>
+                <div class="bg-white size-13 rounded-full flex justify-center items-center">
+                    <div class="size-4 rounded-full bg-[#6aaf34] absolute border-2 border-[#361619] mb-8 ml-12"></div>
+                    <ion-icon name="person" class="text-4xl text-black"></ion-icon>
+                </div>
+                <div class="bg-white size-13 rounded-full flex justify-center items-center">
+                    <div class="size-4 rounded-full bg-[#6aaf34] absolute border-2 border-[#361619] mb-8 ml-12"></div>
+                    <ion-icon name="person" class="text-4xl text-black"></ion-icon>
+                </div>
+                <div class="bg-white size-13 rounded-full flex justify-center items-center">
+                    <div class="size-4 rounded-full bg-[#6aaf34] absolute border-2 border-[#361619] mb-8 ml-12"></div>
+                    <ion-icon name="person" class="text-4xl text-black"></ion-icon>
+                </div>
+                <div class="bg-white size-13 rounded-full flex justify-center items-center">
+                    <div class="size-4 rounded-full bg-[#6aaf34] absolute border-2 border-[#361619] mb-8 ml-12"></div>
+                    <ion-icon name="person" class="text-4xl text-black"></ion-icon>
+                </div>
+                <div class="bg-white size-13 rounded-full flex justify-center items-center">
+                    <div class="size-4 rounded-full bg-[#6aaf34] absolute border-2 border-[#361619] mb-8 ml-12"></div>
+                    <ion-icon name="person" class="text-4xl text-black"></ion-icon>
+                </div>
+                
             </div>
 
         </div>
     </div>
     <div>
-        <div class="bg-[#361619] rounded-4xl text-white h-[300px] flex flex-col items-center justify-between w-30"><livewire:chats.chat-group /></div>
+        <div class="bg-[#361619] rounded-4xl text-white h-[300px] flex flex-col items-center justify-between w-24">
+            <livewire:chats.chat-group />
+        </div>
     </div>
 </div>
