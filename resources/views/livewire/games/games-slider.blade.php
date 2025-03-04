@@ -1,6 +1,6 @@
-<div class="flex  bg-gradient-to-r from-[#C44745] to-[#63282E] rounded-4xl h-[360px] mr-2">
+<div class="flex  bg-gradient-to-r from-[#C44745] to-[#63282E] rounded-4xl h-[370px] mr-2">
     {{-- Pasar los datos por arrays, son tres cuadros o juegos que deben pasar como slider --}}
-    <div class="w-1/2 pt-7 pb-7 px-7 ">
+    <div class="w-3/5 pt-7 pb-7 px-7 ">
         <div class="flex gap-2">
             <div class="flex gap-1 bg-[#F6F7CF] px-3 py-1 rounded-3xl items-center justify-center">
                 <div class="flex justify-center items-center">
@@ -22,12 +22,12 @@
             </div>
 
         </div>
-        <div class="flex flex-col gap-6 justify-around h-full">
+        <div class="flex flex-col justify-around h-full">
             <h1 class="text-4xl font-bold text-white" style="font-family: 'Poppins', sans-serif">Valorant</h1>
             <p class="text-white" style="font-family: 'Poppins', sans-serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus distinctio,
                 voluptatibus mollitia molestias suscipit quam cupiditate quasi atque? Recusandae nob corrupti ipsa est
                 officiis voluptatum erroraccusamus sapiente amet.</p>
-            <div class="flex gap-2">
+            <div class="flex gap-2 mb-2">
                 <div class="flex ">
                     <div class="bg-white size-10 rounded-full flex justify-center items-center border-black border-1 ">
                         <ion-icon name="person" class="text-2xl"></ion-icon>
@@ -52,8 +52,11 @@
             </div>
         </div>
     </div>
-    <div class="w-1/2 flex justify-start items-end">
-        <img src="{{ asset('images/prueba2.png') }}" alt="Juego " class="w-[900px]">
+    <div class="w-2/5 flex items-end overflow-visible relative">
+        <div class="bg-[#9b3a38] w-5 h-1 rounded-xs absolute right-0 top-0 cursor-pointer"></div>
+        <div class="bg-[#e93734] w-10 h-1 rounded-xs absolute right-6 top-0 cursor-pointer"></div>
+        <div class="bg-[#9b3a38] w-5 h-1 rounded-xs absolute right-17 top-0 cursor-pointer"></div>
+        <img src="{{ asset('images/pruebaultimate.png') }}" alt="Juego " class="absolute size-full xl:size-[25vw]">
     </div>
 
 </div>

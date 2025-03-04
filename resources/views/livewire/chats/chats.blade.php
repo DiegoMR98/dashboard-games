@@ -1,5 +1,5 @@
-<div class="flex flex-col gap-10 justify-center items-center">
-    <div class="bg-[#361619] rounded-4xl text-white h-[600px] flex flex-col items-center justify-between w-24">
+<div class="flex flex-col gap-2 xl:gap-10 xl:justify-center xl:items-center">
+    <div class="bg-[#361619] rounded-4xl text-white mt-4 pb-20 xl:pb-0 h-full xl:h-[650px] flex flex-col items-center justify-between w-24">
         <div class="flex flex-col items-center  justify-center gap-6">
             <div class="mt-10 flex justify-center items-center">
                 <div class="bg-white size-14 rounded-full flex justify-center items-center">
@@ -39,7 +39,7 @@
         </div>
     </div>
     <div>
-        <div class="bg-[#361619] rounded-4xl text-white h-[300px] flex flex-col items-center justify-between w-24">
+        <div class="bg-[#361619] rounded-4xl text-white h-[920px] xl:h-[300px] flex flex-col items-center justify-between w-24">
             <livewire:chats.chat-group />
         </div>
     </div>

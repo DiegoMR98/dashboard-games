@@ -1,4 +1,4 @@
-<div class="bg-[#361619] rounded-4xl m-4 text-white h-[950px] flex flex-col items-center justify-between w-52">
+<div class="bg-[#361619] rounded-4xl m-4 text-white h-[1585px] xl:h-[960px] flex flex-col items-center justify-between w-52 ">
     <div class="flex flex-col justify-center items-center mt-10">
         <img src="{{ asset('images/logo1.webp') }}" alt="Logo" class="size-15">
         <div class="flex flex-col justify-center items-center mt-10">

@@ -1,4 +1,4 @@
-<div class="mr-2">
+<div class="mr-2 pb-4 xl:pb-0">
     <div class="flex justify-between items-end mt-[-12px]">
         <h1 class="text-2xl text-white font-semibold">Last Downloads</h1>
         <h1 class="text-lg text-white opacity-60 cursor-pointer hover:scale-105 transition">See More</h1>

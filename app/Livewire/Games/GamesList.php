@@ -18,7 +18,7 @@ class GamesList extends Component
                 'description' => '(Standard Edition + Starter Pass)'
             ],
             [
-                'photo' => asset('images/subway.png'),
+                'photo' => asset('images/unnamed.png'),
                 'name' => 'Subway Surfers',
                 "description" => ''
             ],
