@@ -107,7 +107,7 @@
 
         section main {
             grid-template-columns: 1fr;
-            grid-template-rows: 60px 600px 295px 345px 545px 308px;
+            grid-template-rows: 60px 600px 295px 310px 545px 308px;
             grid-template-areas:
                 "saludo"
                 "componente"

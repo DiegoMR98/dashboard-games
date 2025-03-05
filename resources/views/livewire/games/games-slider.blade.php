@@ -56,7 +56,7 @@
         <div class="bg-[#9b3a38] w-5 h-1 rounded-xs absolute right-0 md:top-0  bottom-0 cursor-pointer"></div>
         <div class="bg-[#e93734] w-10 h-1 rounded-xs absolute right-6 md:top-0 bottom-0 cursor-pointer"></div>
         <div class="bg-[#9b3a38] w-5 h-1 rounded-xs absolute right-17 md:top-0 bottom-0 cursor-pointer"></div>
-        <img src="{{ asset('images/pruebaultimate.png') }}" alt="Juego " class="md:absolute size-96 md:size-80 xl:size-[25vw]">
+        <img src="{{ asset('images/pruebaultimate.png') }}" alt="Juego " class="md:absolute size-80 xl:size-[25vw]">
     </div>
 
 </div>

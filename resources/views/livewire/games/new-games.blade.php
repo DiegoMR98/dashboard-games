@@ -6,35 +6,74 @@
         this.currentIndex = Math.max(this.currentIndex - 1, 0);
     },
     open: false,
-    selectedGame:{},
+    selectedGame: {},
 }" class="relative overflow-hidden mr-2 h-[370px] min-w-0">
 
-    <div class="flex justify-between items-end mb-3">
+    <div class="flex justify-between items-end md:mb-3">
         <h1 class="text-2xl text-white font-semibold">New Games</h1>
         <h1 class="text-lg text-white opacity-60 cursor-pointer hover:scale-105 transition">See More</h1>
     </div>
+    {{-- mobile slider --}}
+    <div class="flex transition-transform duration-500 ease-in-out w-[70vw] h-[70vw] gap-3 md:hidden"
+        :style="'transform: translateX(-' + (currentIndex * 100) + '%)'">
 
-    <div class="flex transition-transform duration-500 ease-in-out gap-6 px-1 z-30"
+        @foreach ($newGames as $game)
+            <div class="flex-shrink-0 w-[70vw] h-[70vw] rounded-[30px] p-4 text-white hover:scale-101 transition relative"
+                style="background-image: url('{{ asset($game['photo']) }}'); background-size: cover; background-position: center;">
+
+                <div class="h-full w-full bg-black opacity-40 rounded-[30px] absolute top-0 left-0 z-30"></div>
+
+                <div class="flex flex-col justify-between h-full relative z-50">
+                    <div class="flex justify-between">
+                        <!-- Botón para abrir modal -->
+                        <div class="size-10 bg-[#C34745] flex justify-center items-center rounded-full cursor-pointer hover:scale-105 transition z-50"
+                            @click="selectedGame = {title:'{{ $game['title'] }}', photo:'{{ asset($game['photo']) }}', description:'{{ $game['description'] }}', price:'{{ $game['price'] }}' }; open=true">
+                            <ion-icon name="play" class="text-white text-3xl"></ion-icon>
+                        </div>
+
+                        <!-- Botón para añadir al carrito -->
+                        <div class="size-10 bg-white flex justify-center items-center rounded-full cursor-pointer hover:scale-105 transition z-50"
+                            @click="$store.cart.addItem({ 
+                                id: {{ $game['id'] }}, 
+                                title: '{{ $game['title'] }}', 
+                                photo: '{{ asset($game['photo']) }}', 
+                                price: {{ $game['price'] }}
+                            })">
+                            <ion-icon name="bag" class="text-[#C34745] text-3xl"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h3 class="text-2xl font-bold">{{ $game['title'] }}</h3>
+                        <p class="text-sm">{{ $game['description'] }}</p>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+
+    {{-- tablet and desktop slider --}}
+    <div class="hidden md:flex transition-transform duration-500 ease-in-out gap-6 px-1 z-30"
         :style="'transform: translateX(-' + (currentIndex * 33) + '%)'">
 
         @foreach ($newGames as $game)
             <div class="flex-shrink-0 rounded-[30px] p-4 text-white aspect-square hover:scale-101 transition relative z-30
-                max-w-[300px] sm:w-[80%] md:w-[50%] lg:w-[40%]"
+                max-w-[300px]  sm:w-[80%] md:w-[50%] lg:w-[40%]"
                 style="background-image: url('{{ asset($game['photo']) }}');background-size: cover; background-position: center;">
 
                 <div class="h-full w-full bg-black opacity-40 rounded-[30px] absolute top-0 left-0 z-30"></div>
                 <div class="flex flex-col justify-between h-full">
                     <div class="flex justify-between">
-                        <div
-                            class="size-10 bg-[#C34745] flex justify-center items-center rounded-full cursor-pointer hover:scale-105 transition z-50" @click="selectedGame = {title:'{{$game['title']}}',photo:'{{asset($game['photo'])}}', description:'{{$game['description']}}', price:'{{$game['price']}}' }; open=true">
+                        <div class="size-10 bg-[#C34745] flex justify-center items-center rounded-full cursor-pointer hover:scale-105 transition z-50"
+                            @click="selectedGame = {title:'{{ $game['title'] }}',photo:'{{ asset($game['photo']) }}', description:'{{ $game['description'] }}', price:'{{ $game['price'] }}' }; open=true">
                             <ion-icon name="play" class="text-white text-3xl"></ion-icon>
                         </div>
-                        <div
-                            class="size-10 bg-white flex justify-center items-center rounded-full cursor-pointer hover:scale-105 transition z-50" @click="$store.cart.addItem({ 
-                                id: {{$game['id']}}, 
-                                title: '{{$game['title']}}', 
+                        <div class="size-10 bg-white flex justify-center items-center rounded-full cursor-pointer hover:scale-105 transition z-50"
+                            @click="$store.cart.addItem({ 
+                                id: {{ $game['id'] }}, 
+                                title: '{{ $game['title'] }}', 
                                 photo: '{{ asset($game['photo']) }}', 
-                                price: {{$game['price']}}
+                                price: {{ $game['price'] }}
                             })">
                             <ion-icon name="bag" class="text-[#C34745] text-3xl"></ion-icon>
                         </div>
@@ -61,16 +100,16 @@
     </button>
 
     {{-- modal --}}
-    <div x-show="open" x-transition.opacity class="fixed inset-0  bg-opacity-50 flex justify-center items-center z-[100]">
+    <div x-show="open" x-transition.opacity
+        class="fixed inset-0  bg-opacity-50 flex justify-center items-center z-[100]">
 
-        <div @click.away="open = false"
-            class="bg-white w-96 md:w-[500px] p-6 rounded-2xl shadow-xl relative">
+        <div @click.away="open = false" class="bg-white w-96 md:w-[500px] p-6 rounded-2xl shadow-xl relative">
 
             <button @click="open = false" class="absolute top-3 right-3 text-gray-600 hover:text-black cursor-pointer">
                 <ion-icon name="close" class="text-2xl"></ion-icon>
             </button>
 
-            <h2 x-text="selectedGame.title" class="text-xl font-semibold text-gray-800" ></h2>
+            <h2 x-text="selectedGame.title" class="text-xl font-semibold text-gray-800"></h2>
             <img x-bind:src="selectedGame.photo" alt="">
             <p x-text="selectedGame.description" class="text-gray-600 mt-2"></p>
             <h1 class="text-xl font-semibold text-red-900">Special offer:</h1>
