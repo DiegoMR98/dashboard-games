@@ -9,7 +9,7 @@
     <div class="flex flex-col gap-2 xl:gap-10 xl:justify-center md:items-center w-full mt-2">
         <!-- aside -->
         <div
-            class="bg-[#361619] rounded-4xl text-white md:mt-1 md:pb-20 xl:pb-0 h-16 md:h-full xl:h-[650px] flex flex-row md:flex-col items-center justify-between w-full md:w-24 hidden md:flex">
+            class="bg-[#361619] rounded-4xl text-white md:mt-1 md:pb-20 xl:pb-0 h-16 md:h-full xl:h-[650px]  flex-row md:flex-col items-center justify-between w-full md:w-24 hidden md:flex">
             <div class="flex flex-row md:flex-col items-center justify-center gap-2 md:gap-6">
                 <div class="pl-4 md:pl-0 md:mt-10 flex justify-center items-center">
                     <div class="bg-white size-10 md:size-14 rounded-full flex justify-center items-center">

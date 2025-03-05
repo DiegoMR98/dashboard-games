@@ -11,6 +11,41 @@
 
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+<script>
+    document.addEventListener('alpine:init', () => {
+    Alpine.store('cart', {
+        items: JSON.parse(localStorage.getItem('cart')) || [],
+
+        addItem(item) {
+            let found = this.items.find(i => i.id === item.id);
+            if (found) {
+                found.quantity++;
+            } else {
+                this.items.push({ ...item, quantity: 1 });
+            }
+            this.saveCart();
+        },
+
+        removeItem(id) {
+            this.items = this.items.filter(i => i.id !== id);
+            this.saveCart();
+        },
+
+        clearCart() {
+            this.items = [];
+            this.saveCart();
+        },
+
+        get totalItems() {
+            return this.items.reduce((acc, item) => acc + item.quantity, 0);
+        },
+
+        saveCart() {
+            localStorage.setItem('cart', JSON.stringify(this.items));
+        }
+    });
+});
+</script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
