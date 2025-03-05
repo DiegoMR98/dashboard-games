@@ -63,7 +63,7 @@
         grid-area: main;
         display: grid;
         grid-template-columns: 10fr 4fr;
-        grid-template-rows: 60px 370px 370px 180px;
+        grid-template-rows: 60px 390px 370px 180px;
         grid-template-areas:
             "saludo saludo"
             "componente games"
@@ -119,29 +119,6 @@
         }
     }
 
-    /* @media (width < 400px) {
-        section {
-            grid-template-columns: 1fr;
-            grid-template-rows: 60px 1fr 60px;
-            grid-template-areas:
-                "header"
-                "main"
-                "footer"
-        }
-
-        section main {
-            grid-template-columns: 1fr;
-            grid-template-rows: 60px 1fr 1fr 1fr 1fr 120px;
-            grid-template-areas:
-                "saludo"
-                "componente"
-                "games"
-                "newgames"
-                "estadistica"
-                "descarga"
-
-        }
-    } */
 
     section header {
         grid-area: header;

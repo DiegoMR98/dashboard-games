@@ -13,35 +13,33 @@ class GamesSlider extends Component
             [
                 'id' => 1,
                 'title' => 'Valorant',
-                'photo' => asset('images/pruebaultimate.jpg'),
-                'description' => 'lorem ipsum asdfa sdecxf sdfa wejds dslcij asdfa cxklñjie sadfñin asdfas ljigjakl sdifjasd iksda',
+                'photo' => asset('images/pruebaultimateW.webp'),
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus distinctio,
+                voluptatibus mollitia molestias suscipit quam cupiditate quasi atque? Recusandae nob corrupti ipsa est
+                officiis voluptatum erroraccusamus sapiente amet.',
                 'reviews' => 53
 
             ],
             [
                 'id' => 2,
-                'title' => 'Dishonored: Standard Edition',
-                'photo' => asset('images/dishonored.jpg'),
-                'description' => '',
-                'price' => '25.00'
+                'title' => 'Fornite',
+                'photo' => asset('images/forniteW.webp'),
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus distinctio,
+                voluptatibus mollitia molestias suscipit quam cupiditate quasi atque? Recusandae nob corrupti ipsa est
+                officiis voluptatum erroraccusamus sapiente amet.',
+                'reviews' => '102'
 
             ],
             [
                 'id' => 3,
-                'title' => 'Black Myth',
-                'photo' => asset('images/blackMyth.jpg'),
-                'description' => 'lorem ipsum asdfa sdecxf sdfa wejds dslcij asdfa cxklñjie sadfñin asdfas ljigjakl sdifjasd iksda',
-                'price' => '40.90'
+                'title' => 'Red Redemptation 3',
+                'photo' => asset('images/redtemtaionW.webp'),
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus distinctio,
+                voluptatibus mollitia molestias suscipit quam cupiditate quasi atque? Recusandae nob corrupti ipsa est
+                officiis voluptatum erroraccusamus sapiente amet.',
+                'reviews' => '40'
 
-            ],
-            [
-                'id' => 4,
-                'title' => 'Elden Ring',
-                'photo' => asset('images/eldenRing.png'),
-                'description' => '',
-                'price' => '19.20'
-
-            ],
+            ]
         ];
     }
     public function render()

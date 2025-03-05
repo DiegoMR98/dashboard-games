@@ -5,7 +5,8 @@
     </div>
     <div class="flex flex-col items-center h-[545px] justify-between bg-[#361619] rounded-4xl mt-3">
         <div class="flex items-center justify-center mt-20">
-            <div class="size-50 border-2 border-red-600 rounded-full flex flex-col items-center justify-center">
+            <div class="size-50 border-2 border-red-600 rounded-full flex flex-col items-center justify-center relative">
+                <div class="absolute"><img src={{ asset('images/animation2.gif') }} alt="animation"></div>
                 <h1 class="text-sm opacity-60 text-white">Total hours</h1>
                 <h1 class="text-3xl font-semibold text-white">12,340h</h1>
             </div>
