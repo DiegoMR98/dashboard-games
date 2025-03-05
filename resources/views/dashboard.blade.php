@@ -8,11 +8,12 @@
     <title>Dashboard Game</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
     section {
         display: grid;
         grid-template-columns: 130px 1fr 130px;
@@ -22,6 +23,7 @@
             "header main footer"
 
     }
+
     section main {
         grid-area: main;
         display: grid;
@@ -58,7 +60,31 @@
 
         }
     }
-    @media (width < 400px) {
+
+    @media(width < 768px) {
+        section {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 45px 1fr;
+            grid-template-areas:
+                "header footer"
+                "main main"
+        }
+
+        section main {
+            grid-template-columns: 1fr;
+            grid-template-rows: 60px 600px 295px 345px 545px 308px;
+            grid-template-areas:
+                "saludo"
+                "componente"
+                "games"
+                "newgames"
+                "estadistica"
+                "descarga"
+
+        }
+    }
+
+    /* @media (width < 400px) {
         section {
             grid-template-columns: 1fr;
             grid-template-rows: 60px 1fr 60px;
@@ -80,13 +106,13 @@
                 "descarga"
 
         }
-    }
+    } */
 
     section header {
         grid-area: header;
     }
 
-   
+
 
     section div {
         grid-area: div;
@@ -124,10 +150,13 @@
 <body class="bg-gradient-to-r from-[#5E2933] via-[#63282E] to-[#61282E]" style="font-family: 'Poppins', sans-serif ">
     <section class="gap-2 ">
         <header class="flex xl:justify-center xl:items-center"> <livewire:the-menu /> </header>
-        <main class="gap-y-6 gap-x-1 xl:gap-4">
-            <div class="flex justify-between items-end mt-2">
-                <div class="w-6/10"><livewire:user-interface.saludo /></div>
-                <div class="flex justify-between gap-14 w-4/10 items-center"><livewire:user-interface.search />
+        <main class="gap-y-6 gap-x-1 xl:gap-4 px-4 md:px-0">
+            <div class="flex justify-between items-center  md:items-end mt-2 flex-wrap">
+                <div class="w-2/5 md:w-1/2 lg:w-6/10">
+                    <livewire:user-interface.saludo />
+                </div>
+                <div class="flex justify-between gap-2 xl:gap-14 w-3/5 md:w-1/2 lg:w-4/10 items-center ">
+                    <livewire:user-interface.search />
                     <div class="flex gap-4 items-center">
                         <livewire:user-interface.cart />
                         <livewire:user-interface.notification />
